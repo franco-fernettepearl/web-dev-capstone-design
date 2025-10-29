@@ -15,7 +15,7 @@ body {
 
 .navbar {
   align-items: center;
-  background-color: maroon;
+  background-color: #991b1b;
   display: flex;
   height: 5em;
   justify-content: space-between;
@@ -66,4 +66,126 @@ body {
   list-style-type: none;
   justify-content: center;
   margin: 0;
+}
+
+.footer {
+  position: relative;
+  background-color: #991b1b;
+  color: #fff;
+  padding: 3rem 2rem 2rem;
+  overflow: hidden;
+}
+
+.background-pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  flex: 1 1 60%;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.footer-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #facc15; /* gold/yellow accent */
+  margin-bottom: 1rem;
+}
+
+.footer-desc {
+  max-width: 600px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #f5f5f5;
+}
+
+.footer-copy .highlight {
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer-right {
+  flex: 1 1 30%;
+  text-align: right;
+}
+
+.footer-connect {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.social-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.social-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.social-btn img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-follow {
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+}
+
+.footer-links a {
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #facc15;
+}
+
+.footer-links span {
+  margin: 0 0.5rem;
+  opacity: 0.7;
 }
