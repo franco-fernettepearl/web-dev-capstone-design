@@ -402,7 +402,6 @@ label {
   color: #991b1b;
 }
 
-/* --- CLICKABLE IMAGE BUTTONS (15 BUTTONS, 3 PER ROW) --- */
 .card-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -444,7 +443,6 @@ label {
   background: rgba(128, 0, 0, 0.4);
 }
 
-/* Responsive layout */
 @media (max-width: 900px) {
   .card-section {
     grid-template-columns: repeat(2, 1fr);
