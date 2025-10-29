@@ -49,7 +49,7 @@ label {
 }
 
 .login-button {
-  background-color: maroon;
+  background-color: #991b1b;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -78,7 +78,7 @@ label {
 .login-button:hover,
 .login-button:focus {
   background-color: #ccc;
-  color: maroon;
+  color: #991b1b;
 }
 
 .navbar {
@@ -97,7 +97,7 @@ label {
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
-  color: maroon;
+  color: #991b1b;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
@@ -120,7 +120,7 @@ label {
 
 .nav-button:hover,
 .nav-button:focus {
-  background-color: maroon;
+  background-color: #991b1b;
   color: white;
 }
 
@@ -348,4 +348,42 @@ label {
 .header-logo-img:hover,
 .header-seal-img:hover {
   transform: scale(1.05);
+}
+
+.cancel-button {
+  background-color: #991b1b;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  height: 40px;
+  width: 40%;
+  line-height: 20px;
+  list-style: none;
+  margin: 1rem;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.cancel-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.cancel-button:hover,
+.cancel-button:focus {
+  background-color: #ccc;
+  color: #991b1b;
 }
