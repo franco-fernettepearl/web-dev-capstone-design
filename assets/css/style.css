@@ -1,0 +1,19 @@
+.system-card figure {
+  height: 350px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f4f6; 
+}
+
+.system-card figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.stat {
+  padding: 0;
+}

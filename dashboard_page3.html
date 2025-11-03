@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUP EIS Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/tailwind.config.js"></script>
+</head>
+
+<body class="min-h-screen bg-gray-200 text-gray-800 font-[Poppins]">
+    <main class="p-10">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
+            <div class="text-center sm:text-left">
+                <h1 class="text-2xl sm:text-4xl font-bold text-gray-800 py-1">
+                    Welcome back, 
+                    <span class="text-pup-red">Sir Amang</span>
+                </h1>
+                <p class="text-sm text-gray-600">Manage your connected systems, track updates, and stay in sync with PUP Taguig’s digital ecosystem.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center sm:items-end gap-3">
+                <div class="flex items-center gap-2">
+                    <label class="input w-full sm:w-64 flex items-center gap-2 border border-gray-300 px-3 py-2 shadow-sm transition-all duration-300">
+                        <svg class="h-5 w-5 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </g>
+                        </svg>
+                        <input type="search" required placeholder="Search" class="w-full outline-none bg-transparent text-sm" />
+                    </label>
+                    <div class="dropdown dropdown-end relative z-[9999]">
+                        <div tabindex="0" role="button" class="btn bg-white shadow-sm text-gray-400 border border-gray-300 hover:bg-pup-red hover:text-white w-15 flex justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
+                                <path d="M10 3.75a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM17.25 4.5a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM5 3.75a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 .75.75ZM4.25 17a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM17.25 17a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM9 10a.75.75 0 0 1-.75.75h-5.5a.75.75 0 0 1 0-1.5h5.5A.75.75 0 0 1 9 10ZM17.25 10.75a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM14 10a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM10 16.25a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z" />
+                            </svg>
+                        </div>
+                        <ul tabindex="-1" class="dropdown-content menu bg-pup-white text-gray-800 rounded-box z-[9999] w-52 p-2 shadow-lg">
+                            <li><a class="text-xs hover:text-pup-red">Academic</a></li>
+                            <li><a class="text-xs hover:text-pup-red">Administrative</a></li>
+                            <li><a class="text-xs hover:text-pup-red">Student Services</a></li>
+                            <li><a class="text-xs hover:text-pup-red">Health & Wellness</a></li>
+                            <li><a class="text-xs hover:text-pup-red">Research & Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
+            <div class="card bg-base-100 shadow-lg border border-gray-100">
+                <div class="card-body">
+                    <h2 class="card-title text-pup-red text-xl font-bold justify-center ">Users Overview</h2>
+                    <p class="text-xs text-gray-600 mb-6">
+                    Provides the total active student and faculty accounts. Data reflects system activity as of November 2025.
+                    </p>
+
+                    <div class="stats stats-vertical lg:stats-horizontal">
+                        <div class="stat text-center">
+                            <div class="stat-title text-gray-700 my-2 text-xs">Students</div>
+                            <div class="stat-value text-pup-red mb-2 text-xl xl:text-2xl">4,820</div>
+                            <div class="stat-desc text-gray-500 mb-3">Updated November 2025</div>
+                        </div>
+
+                        <div class="stat text-center">
+                            <div class="stat-title text-gray-700 my-2 text-xs">Faculty</div>
+                            <div class="stat-value text-pup-red mb-2 text-xl xl:text-2xl">30</div>
+                            <div class="stat-desc text-gray-500 mb-3">Updated November 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-base-100 shadow-lg border border-gray-100">
+                <div class="card-body">
+                    <h2 class="card-title text-pup-red text-xl font-bold justify-center">System Insights</h2>
+                    <p class="text-xs text-gray-600 mb-6">
+                        Provides summary of the most accessed systems and performance trends within PUP-Taguig’s digital environment.
+                    </p>
+
+                    <div class="stats stats-vertical lg:stats-horizontal">
+                        <div class="stat text-center">
+                            <div class="stat-title text-gray-700 my-2 text-xs">Most Used System</div>
+                            <div class="stat-value text-pup-yellow mb-2 text-xl xl:text-2xl">PUP Taguig Website</div>
+                            <div class="stat-desc text-gray-500 mb-3">High user activity this month</div>
+                        </div>
+
+                        <div class="stat text-center">
+                            <div class="stat-title text-gray-700 my-2 text-xs">Connected Systems</div>
+                            <div class="stat-value text-pup-red mb-2 text-xl xl:text-2xl">14</div>
+                            <div class="stat-desc text-gray-500 mb-3">Updated November 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid gap-x-12 gap-y-16 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+                <figure class="relative">
+                    <img 
+                    src="assets/system_card_blur.png" 
+                    alt="PUP Taguig Website" 
+                    class="h-auto object-contain transition-opacity duration-500 hover:opacity-0"
+                    />
+                    <img 
+                    src="assets/system_card_clear.png" 
+                    alt="PUP Taguig Website Clear" 
+                    class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100"
+                    />
+                </figure>
+                <div class="card-body gap-0">
+                    <h2 class="card-title text-pup-red text-lg pb-1">Admission System</h2>
+                    <div class="badge bg-orange-200 text-orange-900 border-none font-semibold">Student Services</div>
+                    <p class="text-sm py-3">Handles applicant registration, evaluation, and admission status.</p>
+                    <div class="card-actions justify-between items-center">
+                        <div class="stats justify-start">
+                            <div class="stat p-0">
+                                <div class="stat-value flex text-base opacity-80 text-pup-red">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 me-2">
+                                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                                    </svg>
+                                    7
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+                <figure class="relative">
+                    <img 
+                    src="assets/system_card_blur.png" 
+                    alt="PUP Taguig Website" 
+                    class="h-auto object-contain transition-opacity duration-500 hover:opacity-0"
+                    />
+                    <img 
+                    src="assets/system_card_clear.png" 
+                    alt="PUP Taguig Website Clear" 
+                    class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100"
+                    />
+                </figure>
+                <div class="card-body gap-0">
+                    <h2 class="card-title text-pup-red text-lg pb-1">OJT System</h2>
+                    <div class="badge bg-orange-200 text-orange-900 border-none font-semibold">Student Services</div>
+                    <p class="text-sm py-3">Tracks internship placements, partner companies, and student performance.</p>
+                    <div class="card-actions justify-between items-center">
+                        <div class="stats justify-start">
+                            <div class="stat p-0">
+                                <div class="stat-value flex text-base opacity-80 text-pup-red">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 me-2">
+                                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                                    </svg>
+                                    13
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="join flex justify-center mt-10">
+            <a href="dashboard_page1.html" class="join-item btn btn-square text-pup-red border-pup-red hover:bg-pup-yellow hover:text-black">1</a>
+            <a href="dashboard_page2.html" class="join-item btn btn-square text-pup-red border-pup-red hover:bg-pup-yellow hover:text-black">2</a>
+            <a href="dashboard_page3.html" class="join-item btn btn-square bg-pup-red text-white border-none hover:bg-pup-yellow hover:text-black">3</a>
+        </div>
+    </main>
+    <script src="assets/js/dashboard-title.js"></script>
+</body>
+</html>
