@@ -3,128 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PUP Taguig EIS Landing Page</title>
+  <title>PUP Taguig EIS Login</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Tailwind CSS for Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
   <nav class="navbar">
     <nav class="logo">
       <img 
-        src="assets/PUPEIS-logo.png" 
-        alt="PUPEIS Logo"
+        src="assets/PUPlogo.png" 
+        alt="PUP Logo"
         class="logo-img">
     </nav>
-    <ul class="nav-menu">
-      <li class="nav-item">
-        <a href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a href="about.html">About Us</a>
-      </li>
-    </ul>
     <nav>
-      <a href="login.html" class="nav-button">Login</a>
+      <a href="index.html" class="nav-button">Login</a>
     </nav>
   </nav>
 
-  <header class="header">
-    <div class="header-background">
+  <div class="login-container">
+    <div class="login-header">
       <img 
-        src="assets/PUPTbg1.jpg" 
-        alt="Header Background"
-        class="header-bg-img"
-      >
-
-      <div class="header-content">
-        <div class="header-logos">
-          <img 
-            src="assets/PUPEIS-logo.png" 
-            alt="PUP EIS Logo"
-            class="header-logo-img"
-          >
-          <img 
-            src="assets/PUPlogo.png" 
-            alt="PUP Taguig Seal"
-            class="header-seal-img"
-          >
-        </div>
-        <h1 class="header-title">Welcome to PUP EIS</h1>
-        <p class="header-subtitle">
-          The PUP Online Repository of all systems for PUP Taguig and an Executive Information System
-        </p>
-
-        <div class="header-buttons">
-          <button class="header-login">
-            <img src="assets/login-icon.png" alt="Login Icon"><a href="login.html">
-            Login
-          </a></button>
+        src="assets/PUPlogo.png" 
+        alt="PUP Logo"
+        class="login-logo">
+      <h1 class="welcome-back">Welcome Back</h1>
+    </div>
+    
+    <form action="">
+      <div class="form-group">
+        <label for="email">Email Address <span class="required">*</span></label>
+        <div class="input-with-icon">
+          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <input 
+            type="text" 
+            name="email" 
+            id="email"
+            placeholder="Enter your email address">
         </div>
       </div>
-    </div>
-  </header>
+      
+      <div class="form-group">
+        <label for="password">Password <span class="required">*</span></label>
+        <div class="input-with-icon">
+          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+          <input 
+            type="password" 
+            name="password" 
+            id="password"
+            placeholder="Enter your password">
+        </div>
+      </div>
 
-<section class="systems-section">
-  <div class="systems-header">
-    <h2 class="systems-title">PUP-Taguig Systems and Services</h2>
-  </div>
-</section>
+      <div class="forgot-password">
+        <a href="#">Forgot your password?</a>
+      </div>
 
-<section class="card-section">
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>PUP Taguig Website</h3></div>
+      <div class="form-buttons">
+        <input type="submit" value="Login" class="login-button">
+      </div>
+    </form>
   </div>
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>Dental Information</h3></div>
-  </div>
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>Faculty Loading and Scheduling</h3></div>
-  </div>
-
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>Student Services</h3></div>
-  </div>
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>PUP-T Online Guidance Office Services</h3></div>
-  </div>
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>Online Clinic Management in PUP-Taguig</h3></div>
-  </div>
-
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>Online Repository of Researches and Extensions</h3></div>
-  </div>
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>Accreditation</h3></div>
-  </div>
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>CWTS</h3></div>
-  </div>
-
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>Administrative Office</h3></div>
-  </div>
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>PUPT Property Inventory Management</h3></div>
-  </div>
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>Registrar Service</h3></div>
-  </div>
-
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>PUP-T Admission</h3></div>
-  </div>
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>OJT</h3></div>
-  </div>
-  <div class="card" style="background-image: url('assets/connected-systems-button.png');">
-    <div class="overlay"><h3>Contact Us</h3></div>
-  </div>
-</section>
 
   <footer class="footer">
     <div class="background-pattern"></div>
     <div class="footer-container">
-
       <div class="footer-left">
         <h2 class="footer-title">PUPT EIS 2025</h2>
         <p class="footer-subtitle">Executive Information System</p>
@@ -132,7 +79,6 @@
           Polytechnic University of the Philippines Taguig Executive Information System – 
           A unified platform streamlining all PUPT systems for secure, accessible, and efficient digital operations.
         </p>
-
         <p class="footer-copy">
           © 2025 <span class="highlight">Polytechnic University of the Philippines</span><br>
           All rights reserved. PUPT EIS User Management System
