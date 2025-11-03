@@ -256,4 +256,14 @@
       </main>
     </div>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const logoutButton = document.querySelector("#profile-menu form button");
+
+      logoutButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        window.location.href = "index.html";
+      });
+    });
+  </script>
 </html>
