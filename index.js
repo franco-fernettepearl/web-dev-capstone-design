@@ -235,6 +235,9 @@ function initSidebar() {
 
 // User Pool Table Functionality
 function initUserPoolTable() {
+  // Only run on pages that have the users table
+  const tableBodyCheck = document.getElementById("users-table-body");
+  if (!tableBodyCheck) return;
   // Dummy user data
   const dummyUsers = [
     {
@@ -379,8 +382,8 @@ function initUserPoolTable() {
     const end = start + itemsPerPage;
     const paginatedUsers = filteredUsers.slice(start, end);
 
-    const tableBody = document.getElementById("users-table-body");
-    const noResults = document.getElementById("no-results");
+  const tableBody = document.getElementById("users-table-body");
+  const noResults = document.getElementById("no-results");
 
     if (paginatedUsers.length === 0) {
       tableBody.innerHTML = "";
@@ -460,14 +463,14 @@ function initUserPoolTable() {
   }
 
   // Event listeners
-  document
-    .getElementById("search-input")
-    .addEventListener("input", filterUsers);
-  document
-    .getElementById("status-filter")
-    .addEventListener("change", filterUsers);
+  const searchEl = document.getElementById("search-input");
+  const statusEl = document.getElementById("status-filter");
+  if (searchEl) searchEl.addEventListener("input", filterUsers);
+  if (statusEl) statusEl.addEventListener("change", filterUsers);
 
-  document.getElementById("prev-btn").addEventListener("click", () => {
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
+  if (prevBtn) prevBtn.addEventListener("click", () => {
     if (currentPage > 1) {
       currentPage--;
       renderTable();
@@ -475,7 +478,7 @@ function initUserPoolTable() {
     }
   });
 
-  document.getElementById("next-btn").addEventListener("click", () => {
+  if (nextBtn) nextBtn.addEventListener("click", () => {
     const maxPage = Math.ceil(filteredUsers.length / itemsPerPage);
     if (currentPage < maxPage) {
       currentPage++;
@@ -488,10 +491,146 @@ function initUserPoolTable() {
   renderTable();
 }
 
+// Add User form functionality (for addUser.html)
+function initAddUserForm() {
+  const form = document.getElementById('add-user-form');
+  // Run only on Add User page
+  if (!form) return;
+
+  const inviteRadios = document.querySelectorAll('input[name="inviteMode"]');
+  const inviteOptions = document.getElementById('invite-options');
+  const tempPasswordOptions = document.getElementById('temp-password-options');
+
+  function updateMode() {
+    const mode = [...inviteRadios].find(r => r.checked)?.value || 'invite';
+    const isInvite = mode === 'invite';
+    if (inviteOptions) inviteOptions.classList.toggle('hidden', !isInvite);
+    if (tempPasswordOptions) tempPasswordOptions.classList.toggle('hidden', isInvite);
+  }
+
+  inviteRadios.forEach(r => r.addEventListener('change', updateMode));
+  updateMode();
+
+  // Optional dynamic attributes support (only if elements exist)
+  const addAttrBtn = document.getElementById('add-attr');
+  const attrList = document.getElementById('attributes-list');
+  function addAttributeRow(name = '', value = '') {
+    if (!attrList) return;
+    const row = document.createElement('div');
+    row.className = 'grid grid-cols-1 md:grid-cols-12 gap-3 items-end';
+    row.innerHTML = `
+      <div class="md:col-span-5">
+        <label class="block text-sm font-medium text-gray-700">Attribute name</label>
+        <input type="text" name="attr_name" placeholder="e.g. custom:department" value="${name}"
+          class="mt-1 w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500" />
+      </div>
+      <div class="md:col-span-6">
+        <label class="block text-sm font-medium text-gray-700">Value</label>
+        <input type="text" name="attr_value" placeholder="e.g. Engineering" value="${value}"
+          class="mt-1 w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500" />
+      </div>
+      <div class="md:col-span-1 flex md:justify-end">
+        <button type="button" class="px-3 py-2 rounded-md border border-gray-300 hover:bg-gray-50 remove-attr" title="Remove">Remove</button>
+      </div>`;
+    const removeBtn = row.querySelector('.remove-attr');
+    if (removeBtn) removeBtn.addEventListener('click', () => row.remove());
+    attrList.appendChild(row);
+  }
+  if (addAttrBtn) addAttrBtn.addEventListener('click', () => addAttributeRow());
+
+  // Secure password generator
+  function generateSecurePassword(length = 16) {
+    const upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const lower = 'abcdefghijklmnopqrstuvwxyz';
+    const digits = '0123456789';
+    const symbols = '!@#$%^&*()-_=+[]{};:,.<>?';
+    const all = upper + lower + digits + symbols;
+    let pwd = [
+      upper[Math.floor(Math.random() * upper.length)],
+      lower[Math.floor(Math.random() * lower.length)],
+      digits[Math.floor(Math.random() * digits.length)],
+      symbols[Math.floor(Math.random() * symbols.length)],
+    ];
+    const remaining = length - pwd.length;
+    if (window.crypto && window.crypto.getRandomValues) {
+      const randomValues = new Uint32Array(remaining);
+      window.crypto.getRandomValues(randomValues);
+      for (let i = 0; i < remaining; i++) {
+        pwd.push(all[randomValues[i] % all.length]);
+      }
+    } else {
+      for (let i = 0; i < remaining; i++) {
+        pwd.push(all[Math.floor(Math.random() * all.length)]);
+      }
+    }
+    for (let i = pwd.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pwd[i], pwd[j]] = [pwd[j], pwd[i]];
+    }
+    return pwd.join('');
+  }
+
+  const genBtn = document.getElementById('generate-temp-password');
+  if (genBtn) genBtn.addEventListener('click', () => {
+    const input = document.getElementById('temp_password');
+    if (!input) return;
+    const pwd = generateSecurePassword(16);
+    input.value = pwd;
+    const tempRadio = [...inviteRadios].find(r => r.value === 'temp');
+    if (tempRadio && !tempRadio.checked) {
+      tempRadio.checked = true;
+      updateMode();
+    }
+    input.classList.add('ring-2','ring-green-400');
+    setTimeout(() => input.classList.remove('ring-2','ring-green-400'), 600);
+  });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = (document.getElementById('email')?.value || '').trim();
+    const phone = (document.getElementById('phone')?.value || '').trim();
+    const mode = [...inviteRadios].find(r => r.checked)?.value || 'invite';
+    const tempPassword = (document.getElementById('temp_password')?.value || '').trim();
+    if (!email && !phone) {
+      alert('Please provide at least an email or a phone number.');
+      return;
+    }
+    if (mode === 'temp' && tempPassword.length < 8) {
+      alert('Temporary password must be at least 8 characters.');
+      return;
+    }
+    const attrs = [];
+    const names = form.querySelectorAll('input[name="attr_name"]');
+    const values = form.querySelectorAll('input[name="attr_value"]');
+    names.forEach((n, i) => {
+      const key = (n.value || '').trim();
+      const val = (values[i]?.value || '').trim();
+      if (key && val) attrs.push({ name: key, value: val });
+    });
+    const payload = {
+      username: (document.getElementById('username')?.value || '').trim(),
+      email,
+      phone,
+      given_name: (document.getElementById('given_name')?.value || '').trim(),
+      family_name: (document.getElementById('family_name')?.value || '').trim(),
+      inviteMode: mode,
+      delivery: (document.querySelector('input[name="delivery"]:checked')?.value || 'email'),
+      temp_password: tempPassword,
+      require_reset: document.getElementById('require_reset')?.checked ?? true,
+      email_verified: document.getElementById('email_verified')?.checked ?? false,
+      phone_verified: document.getElementById('phone_verified')?.checked ?? false,
+      attributes: attrs,
+    };
+    console.log('Create user payload:', payload);
+    alert('User would be created with these details. Check console for payload.');
+  });
+}
+
 // Initialize all functionality when DOM is ready
 document.addEventListener("DOMContentLoaded", function () {
   initProfileMenu();
   initDropdownFunctionality();
   initSidebar();
   initUserPoolTable();
+  initAddUserForm();
 });
