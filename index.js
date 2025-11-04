@@ -37,6 +37,16 @@ function initProfileMenu() {
     profileMenu.addEventListener("click", function (e) {
       e.stopPropagation();
     });
+
+    // Handle logout submit: redirect to index.html
+    const logoutForm = profileMenu.querySelector("form");
+    if (logoutForm) {
+      logoutForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        closeMenu();
+        window.location.href = "index.html";
+      });
+    }
   }
 
   // Close on Escape
