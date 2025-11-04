@@ -12,6 +12,48 @@
 </head>
 
 <body class="min-h-screen bg-gray-200 text-gray-800 font-[Poppins]">
+    <nav
+      class="fixed top-0 left-0 right-0 bg-red-800 text-white p-2 flex items-center justify-between z-[100] shadow transition-all duration-300 h-16 z"
+      id="navbar"
+    >
+      <div class="flex items-center space-x-2">
+      </div>
+      <div class="flex items-center space-x-3 pr-2">
+        <div class="relative">
+          <button
+            id="profile-toggle"
+            type="button"
+            class="flex items-center gap-3 px-3 py-2 rounded-full bg-white text-red-800 border border-red-800 hover:bg-yellow-400 hover:text-white transition-all duration-200 ease-in-out shadow-md hover:shadow-lg text-sm font-semibold transform hover:scale-105"
+            title="Profile"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 1.5c-4 0-7.5 1.79-7.5 4v1.5A1.5 1.5 0 0 0 6 21h12a1.5 1.5 0 0 0 1.5-1.5V17.5c0-2.21-3.5-4-7.5-4Z"
+              ></path>
+            </svg>
+          </button>
+
+          <div
+            id="profile-menu"
+            class="hidden absolute right-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50"
+          >
+            <form>
+              <button
+                type="submit"
+                class="w-full text-left px-4 py-2 text-sm text-red-700 hover:bg-red-50 hover:text-red-900"
+              >
+                Logout
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
     <header class="header">
         <div class="header-background">
         <img src="assets/PUPTbg1.jpg" alt="Header Background" class="header-bg-img">
@@ -28,7 +70,7 @@
         </div>
     </header>
     
-    <main class="p-10">
+    <main class="p-10 pt-24">
         <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
             <div class="text-center sm:text-left">
                 <h1 class="text-2xl sm:text-4xl font-bold text-gray-800 py-1">
@@ -48,13 +90,13 @@
                         </svg>
                         <input type="search" required placeholder="Search" class="w-full outline-none bg-transparent text-sm" />
                     </label>
-                    <div class="dropdown dropdown-end relative z-[9999]">
-                        <div tabindex="0" role="button" class="btn bg-white shadow-sm text-gray-400 border border-gray-300 hover:bg-pup-red hover:text-white w-15 flex justify-start">
+                    <div class="dropdown dropdown-end relative z-[60]">
+                        <button id="filter-toggle" class="btn bg-white shadow-sm text-gray-400 border border-gray-300 hover:bg-pup-red hover:text-white w-15 flex justify-start">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
                                 <path d="M10 3.75a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM17.25 4.5a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM5 3.75a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 .75.75ZM4.25 17a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM17.25 17a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM9 10a.75.75 0 0 1-.75.75h-5.5a.75.75 0 0 1 0-1.5h5.5A.75.75 0 0 1 9 10ZM17.25 10.75a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM14 10a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM10 16.25a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z" />
                             </svg>
-                        </div>
-                        <ul tabindex="-1" class="dropdown-content menu bg-pup-white text-gray-800 rounded-box z-[9999] w-52 p-2 shadow-lg">
+                        </button>
+                        <ul tabindex="-1" class="dropdown-content menu bg-pup-white text-gray-800 rounded-box z-[70] w-52 p-2 shadow-lg">
                             <li><a class="text-xs hover:text-pup-red">Academic</a></li>
                             <li><a class="text-xs hover:text-pup-red">Administrative</a></li>
                             <li><a class="text-xs hover:text-pup-red">Student Services</a></li>
@@ -118,6 +160,26 @@
             <a href="dashboard_page3.html" class="join-item btn btn-square bg-pup-red text-white border-none hover:bg-pup-yellow hover:text-black">3</a>
         </div>
     </main>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.getElementById("filter-toggle");
+        const menu = toggle.parentElement.querySelector(".dropdown-content");
+
+        toggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            menu.classList.toggle("hidden");
+        });
+
+        document.addEventListener("click", (e) => {
+            setTimeout(() => {
+            if (!menu.classList.contains("hidden") && !menu.contains(e.target) && !toggle.contains(e.target)) {
+                menu.classList.add("hidden");
+            }
+            }, 50);
+        });
+    });
+    </script>
     <script src="assets/js/dashboard-title.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
