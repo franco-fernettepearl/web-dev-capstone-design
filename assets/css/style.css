@@ -81,3 +81,20 @@
 .header-seal-img:hover {
   transform: scale(1.05);
 }
+
+.system-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.system-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.system-card.hidden-card {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
