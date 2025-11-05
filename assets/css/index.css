@@ -61,7 +61,7 @@ label {
 }
 
 .login-container {
-  background-image: url("assets/PUPTbg1.jpg");
+  background-image: url("../PUPTbg1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
