@@ -121,20 +121,24 @@ label {
 }
 
 .header {
+  display: flex;
   align-items: center;
   background-color: #991b1b;
+  height: 6em;
+  padding: 0 1.5em;
+}
+
+.left-group {
   display: flex;
-  height: 5em;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0 1em;
-  width: 100%;
+  align-items: center;
+  gap: 1.2em;
+  margin-left: -30px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 10px;
 }
 
 .pup-logo-img {
@@ -143,6 +147,26 @@ label {
 
 .idp-logo-img {
   height: 90px;
+}
+
+.text-column {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: flex-start;
+  margin-left: -40px;
+}
+
+.title {
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 0.75em;
+  opacity: 0.9;
+  margin-top: -2px;
 }
 
 .nav-button {
