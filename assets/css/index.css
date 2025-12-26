@@ -623,6 +623,14 @@ label {
   margin-left: 2rem;
 }
 
+.login-logo-eis {
+  width: 220px;
+  height: 220px;
+  margin-bottom: 1.5rem;
+  display: block;
+  margin-right: 2rem;
+}
+
 .welcome-back {
   font-size: 2.5rem; 
   font-weight: 700; 
