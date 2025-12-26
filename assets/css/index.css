@@ -120,15 +120,29 @@ label {
   color: #991b1b;
 }
 
-.navbar {
+.header {
   align-items: center;
   background-color: #991b1b;
   display: flex;
   height: 5em;
   justify-content: space-between;
   margin: 0;
-  padding: 0;
+  padding: 0 1em;
   width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.pup-logo-img {
+  height: 60px;
+}
+
+.idp-logo-img {
+  height: 90px;
 }
 
 .nav-button {
@@ -431,33 +445,6 @@ label {
 .header-buttons a {
   color: white;
   text-decoration: none;
-}
-
-.header-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 15px;
-}
-
-.header-logo-img {
-  width: 150px;
-  height: auto;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.header-seal-img {
-  width: 100px;
-  height: auto;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.header-logo-img:hover,
-.header-seal-img:hover {
-  transform: scale(1.05);
 }
 
 .cancel-button {
