@@ -108,3 +108,104 @@ input[type="radio"] {
 input[type="checkbox"] {
   accent-color: #b91c1c;
 }
+
+/* Left group (logos + text) */
+.header-navbar {
+  display: flex;
+  align-items: center;
+  background-color: #991b1b;
+  height: 6em;
+  padding: 0 1.5em;
+}
+
+.left-group {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  margin-left: -30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Fix logo sizes */
+.pup-logo-img {
+  height: 60px;
+}
+.idp-logo-img {
+  height: 90px;
+}
+
+/* Text beside logos */
+.text-column {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: flex-start;
+  margin-left: -10px;
+}
+
+.title {
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 0.75em;
+  opacity: 0.9;
+  margin-top: -2px;
+}
+
+/* Right profile toggle */
+.right-group {
+  display: flex;
+  align-items: center;
+}
+
+.profile-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 9999px;
+  border: 2px solid white;
+  transition: 0.2s ease;
+}
+
+.profile-btn:hover {
+  background: #facc15;
+  color: #991b1b;
+  transform: scale(1.05);
+}
+
+/* Dropdown */
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  background: white;
+  color: #991b1b;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 150px;
+  padding: 8px 0;
+  z-index: 999;
+}
+
+.dropdown-item {
+  width: 100%;
+  text-align: left;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+  background-color: #fee2e2;
+  color: #991b1b;
+}

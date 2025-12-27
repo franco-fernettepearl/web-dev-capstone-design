@@ -12,48 +12,44 @@
 </head>
 
 <body class="min-h-screen bg-gray-200 text-gray-800 font-[Poppins]">
-    <nav
-      class="fixed top-0 left-0 right-0 bg-red-800 text-white p-2 flex items-center justify-between z-[100] shadow transition-all duration-300 h-16"
-      id="navbar"
-    >
-      <div class="flex items-center space-x-2">
-      </div>
-      <div class="flex items-center space-x-3 pr-2">
-        <div class="relative">
-          <button
-            id="profile-toggle"
-            type="button"
-            class="flex items-center gap-3 px-3 py-2 rounded-full bg-white text-red-800 border border-red-800 hover:bg-yellow-400 hover:text-white transition-all duration-200 ease-in-out shadow-md hover:shadow-lg text-sm font-semibold transform hover:scale-105"
-            title="Profile"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-5 h-5"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path
-                d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 1.5c-4 0-7.5 1.79-7.5 4v1.5A1.5 1.5 0 0 0 6 21h12a1.5 1.5 0 0 0 1.5-1.5V17.5c0-2.21-3.5-4-7.5-4Z"
-              ></path>
-            </svg>
-          </button>
+    <nav class="header-navbar w-full bg-[#991b1b] flex items-center justify-between px-6 py-3 z-[100] relative">
 
-          <div
-            id="profile-menu"
-            class="hidden absolute right-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50"
-          >
-            <form>
-              <button
-                type="submit"
-                class="w-full text-left px-4 py-2 text-sm text-red-700 hover:bg-red-50 hover:text-red-900"
-              >
-                Logout
-              </button>
-            </form>
-          </div>
+        <!-- LEFT GROUP -->
+        <div class="flex items-center gap-4">
+
+            <!-- Logos -->
+            <div class="flex items-center gap-2">
+                <img src="assets/PUPlogo.png" alt="PUP Logo" class="pup-logo-img">
+                <img src="assets/PUPIDP-logo.png" alt="PUP IDP Logo" class="idp-logo-img">
+            </div>
+
+            <!-- Text column -->
+            <div class="text-column">
+                <div class="title"> PUPT IDENTITY PROVIDER</div>
+                <div class="subtitle">POLYTECHNIC UNIVERSITY OF THE PHILIPPINES — TAGUIG CAMPUS</div>
+            </div>
+
         </div>
-      </div>
+
+        <!-- RIGHT GROUP -->
+        <div class="relative">
+            <button class="profile-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor">
+                    <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 
+                    1.5c-4 0-7.5 1.79-7.5 4v1.5A1.5 1.5 0 0 0 6 21h12a1.5 
+                    1.5 0 0 0 1.5-1.5V17.5c0-2.21-3.5-4-7.5-4Z"/>
+                </svg>
+            </button>
+
+            <div id="profile-dropdown" class="absolute right-0 mt-2 w-32 bg-white text-black rounded shadow hidden">
+                <form>
+                    <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-100">Logout</button>
+                </form>
+            </div>
+        </div>
+
     </nav>
+
     <header class="header">
         <div class="header-background">
         <img src="assets/PUPTbg1.jpg" alt="Header Background" class="header-bg-img">
