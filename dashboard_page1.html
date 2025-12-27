@@ -514,6 +514,36 @@
         // INITIAL LOAD → PAGE 1
         // ------------------------------
         rebuildPagination();
+
+        // ---- HELPER FUNCTION TO TOGGLE DROPDOWN ----
+        function setupDropdown(buttonSelector, dropdownSelector) {
+            const btn = document.querySelector(buttonSelector);
+            const dropdown = document.querySelector(dropdownSelector);
+
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation(); // prevent immediate closing
+                dropdown.classList.toggle("hidden");
+            });
+
+            // Close when clicking outside
+            document.addEventListener("click", () => {
+                dropdown.classList.add("hidden");
+            });
+        }
+
+        // ---- PROFILE DROPDOWN ----
+        setupDropdown(".profile-btn", "#profile-dropdown");
+
+        // ---- FILTER DROPDOWN ----
+        setupDropdown(".dropdown-toggle", ".dropdown-content");
+
+        // ---- LOGOUT REDIRECT ----
+        const logoutBtn = document.querySelector("#profile-dropdown button[type='submit']");
+        logoutBtn.addEventListener("click", (e) => {
+            e.preventDefault(); // prevent form submission
+            window.location.href = "index.html";
+        });
+
     });
 
     </script>
