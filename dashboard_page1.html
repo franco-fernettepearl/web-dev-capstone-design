@@ -12,243 +12,335 @@
 </head>
 
 <body class="min-h-screen bg-gray-200 text-gray-800 font-[Poppins]">
-    <nav class="header-navbar w-full bg-[#991b1b] flex items-center justify-between px-6 py-3 z-[100] relative">
+  <nav class="header-navbar w-full bg-[#991b1b] flex items-center justify-between px-6 py-3 z-[100] relative">
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <img src="assets/PUPlogo.png" alt="PUP Logo" class="pup-logo-img">
+      </div>
+      <div class="text-column">
+        <div class="title"> PUP TAGUIG ONE PORTAL</div>
+        <div class="subtitle">POLYTECHNIC UNIVERSITY OF THE PHILIPPINES — TAGUIG CAMPUS</div>
+      </div>
+    </div>
+    <div class="relative">
+      <button class="profile-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor">
+          <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 
+          1.5c-4 0-7.5 1.79-7.5 4v1.5A1.5 1.5 0 0 0 6 21h12a1.5 
+          1.5 0 0 0 1.5-1.5V17.5c0-2.21-3.5-4-7.5-4Z"/>
+        </svg>
+      </button>
+      <div id="profile-dropdown" class="absolute right-0 mt-2 w-32 bg-white text-black rounded shadow hidden">
+        <form>
+          <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-100">Logout</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
-        <!-- LEFT GROUP -->
-        <div class="flex items-center gap-4">
-
-            <!-- Logos -->
-            <div class="flex items-center gap-2">
-                <img src="assets/PUPlogo.png" alt="PUP Logo" class="pup-logo-img">
-            </div>
-
-            <!-- Text column -->
-            <div class="text-column">
-                <div class="title"> PUP TAGUIG ONE PORTAL</div>
-                <div class="subtitle">POLYTECHNIC UNIVERSITY OF THE PHILIPPINES — TAGUIG CAMPUS</div>
-            </div>
-
+  <header class="header">
+    <div class="header-background">
+      <img src="assets/PUPTbg1.jpg" alt="Header Background" class="header-bg-img">
+      <div class="header-content">
+        <div class="header-logos">
+          <img src="assets/PUPlogo.png" alt="PUP Taguig Seal" class="header-seal-img">
         </div>
+        <h1 class="header-title">PUP Taguig One Portal</h1>
+        <p class="header-subtitle">
+          The PUP Online Repository of all systems for PUP Taguig students, faculty, and staff.
+        </p>
+      </div>
+    </div>
+  </header>
 
-        <!-- RIGHT GROUP -->
-        <div class="relative">
-            <button class="profile-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor">
-                    <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 
-                    1.5c-4 0-7.5 1.79-7.5 4v1.5A1.5 1.5 0 0 0 6 21h12a1.5 
-                    1.5 0 0 0 1.5-1.5V17.5c0-2.21-3.5-4-7.5-4Z"/>
+  <main class="p-10 pt-24">
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
+      <div class="text-center sm:text-left">
+        <h1 class="text-2xl sm:text-4xl font-bold text-gray-800 py-1">
+          Welcome back, 
+          <span class="text-pup-red">Student!</span>
+        </h1>
+        <p class="text-sm text-gray-600">Manage your connected systems, track updates, and stay in sync with PUP Taguig’s digital ecosystem.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center sm:items-end gap-3">
+        <div class="flex items-center gap-2">
+          <label class="input w-full sm:w-64 flex items-center gap-2 border border-gray-300 px-3 py-2 shadow-sm transition-all duration-300">
+            <svg class="h-5 w-5 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input type="search" id="search-input" placeholder="Search" class="w-full outline-none bg-transparent text-sm" />
+          </label>
+          <div class="dropdown dropdown-end relative z-[999]" tabindex="0">
+            <button tabindex="0"class="btn bg-white shadow-sm text-gray-400 border border-gray-300 
+                        hover:bg-pup-red hover:text-white w-15 flex justify-start dropdown-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
+                    <path d="M10 3.75a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM17.25 4.5a.75.75 
+                            0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM5 
+                            3.75a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 
+                            0-1.5h1.5a.75.75 0 0 1 .75.75ZM4.25 17a.75.75 
+                            0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM17.25 
+                            17a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 
+                            1.5h5.5ZM9 10a.75.75 0 0 1-.75.75h-5.5a.75.75 
+                            0 0 1 0-1.5h5.5A.75.75 0 0 1 9 10ZM17.25 
+                            10.75a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 
+                            1.5h1.5ZM14 10a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM10 
+                            16.25a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z" />
                 </svg>
             </button>
 
-            <div id="profile-dropdown" class="absolute right-0 mt-2 w-32 bg-white text-black rounded shadow hidden">
-                <form>
-                    <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-100">Logout</button>
-                </form>
+            <ul tabindex="0" class="dropdown-content menu bg-white text-gray-800 rounded-box w-52 p-2 shadow-lg z-[999]">
+                <li><a class="text-xs hover:text-pup-red filter-option" data-filter="All">All</a></li>
+                <li><a class="text-xs hover:text-pup-red filter-option" data-filter="Academic">Academic</a></li>
+                <li><a class="text-xs hover:text-pup-red filter-option" data-filter="Administrative">Administrative</a></li>
+                <li><a class="text-xs hover:text-pup-red filter-option" data-filter="Student Services">Student Services</a></li>
+                <li><a class="text-xs hover:text-pup-red filter-option" data-filter="Health & Wellness">Health & Wellness</a></li>
+                <li><a class="text-xs hover:text-pup-red filter-option" data-filter="Research & Development">Research & Development</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD CONTAINER -->
+    <div id="card-container" class="grid gap-x-12 gap-y-16 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <!-- CARD 1 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="PUP Taguig Website" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="PUP Taguig Website Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">PUP Taguig Website</h2>
+                <div class="badge bg-orange-200 text-orange-900 border-none font-medium">Student Services</div>
+                <p class="text-sm py-3">Official website of PUP Taguig for public information and announcements.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                </div>
             </div>
         </div>
 
-    </nav>
-
-    <header class="header">
-        <div class="header-background">
-        <img src="assets/PUPTbg1.jpg" alt="Header Background" class="header-bg-img">
-
-        <div class="header-content">
-            <div class="header-logos">
-            <img src="assets/PUPlogo.png" alt="PUP Taguig Seal" class="header-seal-img">
-            </div>
-            <h1 class="header-title">PUP Taguig One Portal</h1>
-            <p class="header-subtitle">
-            The PUP Online Repository of all systems for PUP Taguig students, faculty, and staff.
-            </p>
-        </div>
-        </div>
-    </header>
-
-    <main class="p-10 pt-24">
-        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
-            <div class="text-center sm:text-left">
-                <h1 class="text-2xl sm:text-4xl font-bold text-gray-800 py-1">
-                    Welcome back, 
-                    <span class="text-pup-red">Student!</span>
-                </h1>
-                <p class="text-sm text-gray-600">Manage your connected systems, track updates, and stay in sync with PUP Taguig’s digital ecosystem.</p>
-            </div>
-            <div class="flex flex-col sm:flex-row items-center sm:items-end gap-3">
-                <div class="flex items-center gap-2">
-                    <label class="input w-full sm:w-64 flex items-center gap-2 border border-gray-300 px-3 py-2 shadow-sm transition-all duration-300">
-                        <svg class="h-5 w-5 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.3-4.3"></path>
-                            </g>
-                        </svg>
-                        <input type="search" required placeholder="Search" class="w-full outline-none bg-transparent text-sm" />
-                    </label>
-                    <div class="dropdown dropdown-end relative z-[60]">
-                        <button id="filter-toggle" class="btn bg-white shadow-sm text-gray-400 border border-gray-300 hover:bg-pup-red hover:text-white w-15 flex justify-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
-                                <path d="M10 3.75a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM17.25 4.5a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM5 3.75a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 .75.75ZM4.25 17a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM17.25 17a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM9 10a.75.75 0 0 1-.75.75h-5.5a.75.75 0 0 1 0-1.5h5.5A.75.75 0 0 1 9 10ZM17.25 10.75a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM14 10a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM10 16.25a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z" />
-                            </svg>
-                        </button>
-                        <ul tabindex="-1" class="dropdown-content menu bg-pup-white text-gray-800 rounded-box z-[70] w-52 p-2 shadow-lg">
-                            <li><a class="text-xs hover:text-pup-red">Academic</a></li>
-                            <li><a class="text-xs hover:text-pup-red">Administrative</a></li>
-                            <li><a class="text-xs hover:text-pup-red">Student Services</a></li>
-                            <li><a class="text-xs hover:text-pup-red">Health & Wellness</a></li>
-                            <li><a class="text-xs hover:text-pup-red">Research & Development</a></li>
-                        </ul>
-                    </div>
+        <!-- CARD 2 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="Dental Information System" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="Dental Information System Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">Dental Information System</h2>
+                <div class="badge bg-green-200 text-green-900 border-none font-medium">Health & Wellness</div>
+                <p class="text-sm py-3">Manages dental records and clinic schedules for students and staff.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
                 </div>
             </div>
         </div>
-        <div class="grid gap-x-12 gap-y-16 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
-                <figure class="relative">
-                    <img 
-                    src="assets/system_card_blur.png" 
-                    alt="PUP Taguig Website" 
-                    class="h-auto object-contain transition-opacity duration-500 hover:opacity-0"
-                    />
-                    <img 
-                    src="assets/system_card_clear.png" 
-                    alt="PUP Taguig Website Clear" 
-                    class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100"
-                    />
-                </figure>
-                <div class="card-body gap-0">
-                    <h2 class="card-title text-pup-red text-lg pb-1">PUP Taguig Website</h2>
-                    <div class="badge bg-orange-200 text-orange-900 border-none font-medium">Student Services</div>
-                    <p class="text-sm py-3">Official website of PUP Taguig for public information and announcements.</p>
-                    <div class="card-actions justify-end items-center">
-                        <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
-                <figure class="relative">
-                    <img 
-                    src="assets/system_card_blur.png" 
-                    alt="PUP Taguig Website" 
-                    class="h-auto object-contain transition-opacity duration-500 hover:opacity-0"
-                    />
-                    <img 
-                    src="assets/system_card_clear.png" 
-                    alt="PUP Taguig Website Clear" 
-                    class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100"
-                    />
-                </figure>
-                <div class="card-body gap-0">
-                    <h2 class="card-title text-pup-red text-lg pb-1">Dental Information System</h2>
-                    <div class="badge bg-green-200 text-green-900 border-none font-medium">Health & Wellness</div>
-                    <p class="text-sm py-3">Manages dental records and clinic schedules for students and staff.</p>
-                    <div class="card-actions justify-end items-center">
-                        <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
-                <figure class="relative">
-                    <img 
-                    src="assets/system_card_blur.png" 
-                    alt="PUP Taguig Website" 
-                    class="h-auto object-contain transition-opacity duration-500 hover:opacity-0"
-                    />
-                    <img 
-                    src="assets/system_card_clear.png" 
-                    alt="PUP Taguig Website Clear" 
-                    class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100"
-                    />
-                </figure>
-                <div class="card-body gap-0">
-                    <h2 class="card-title text-pup-red text-lg pb-1">Faculty Loading & Scheduling System</h2>
-                    <div class="badge bg-yellow-200 text-yellow-900 border-none font-medium">Academic</div>
-                    <p class="text-sm py-3">Organizes faculty teaching loads, schedules, and room assignments.</p>
-                    <div class="card-actions justify-end items-center">
-                        <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
-                <figure class="relative">
-                    <img 
-                    src="assets/system_card_blur.png" 
-                    alt="PUP Taguig Website" 
-                    class="h-auto object-contain transition-opacity duration-500 hover:opacity-0"
-                    />
-                    <img 
-                    src="assets/system_card_clear.png" 
-                    alt="PUP Taguig Website Clear" 
-                    class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100"
-                    />
-                </figure>
-                <div class="card-body gap-0">
-                    <h2 class="card-title text-pup-red text-lg pb-1">Student Services System</h2>
-                    <div class="badge bg-orange-200 text-orange-900 border-none font-medium">Student Services</div>
-                    <p class="text-sm py-3">Centralized access to student-related services and requests.</p>
-                    <div class="card-actions justify-end items-center">
-                        <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
-                <figure class="relative">
-                    <img 
-                    src="assets/system_card_blur.png" 
-                    alt="PUP Taguig Website" 
-                    class="h-auto object-contain transition-opacity duration-500 hover:opacity-0"
-                    />
-                    <img 
-                    src="assets/system_card_clear.png" 
-                    alt="PUP Taguig Website Clear" 
-                    class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100"
-                    />
-                </figure>
-                <div class="card-body gap-0">
-                    <h2 class="card-title text-pup-red text-lg pb-1">Online Guidance Office Services</h2>
-                    <div class="badge bg-green-200 text-green-900 border-none font-medium">Health & Wellness</div>
-                    <p class="text-sm py-3">Submit counseling requests and communicate with guidance staff online.</p>
-                    <div class="card-actions justify-end items-center">
-                        <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
-                <figure class="relative">
-                    <img 
-                    src="assets/system_card_blur.png" 
-                    alt="PUP Taguig Website" 
-                    class="h-auto object-contain transition-opacity duration-500 hover:opacity-0"
-                    />
-                    <img 
-                    src="assets/system_card_clear.png" 
-                    alt="PUP Taguig Website Clear" 
-                    class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100"
-                    />
-                </figure>
-                <div class="card-body gap-0">
-                    <h2 class="card-title text-pup-red text-lg pb-1">Online Clinic Management System</h2>
-                    <div class="badge bg-green-200 text-green-900 border-none font-medium">Health & Wellness</div>
-                    <p class="text-sm py-3">Record, monitor, and manage medical visits and student health data.</p>
-                    <div class="card-actions justify-end items-center">
-                        <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
-                    </div>
+        <!-- CARD 3 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="Faculty Loading & Scheduling System" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="Faculty Loading & Scheduling System Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">Faculty Loading & Scheduling System</h2>
+                <div class="badge bg-yellow-200 text-yellow-900 border-none font-medium">Academic</div>
+                <p class="text-sm py-3">Organizes faculty teaching loads, schedules, and room assignments.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
                 </div>
             </div>
         </div>
-        <div class="join flex justify-center mt-10">
-            <a href="dashboard_page1.html" class="join-item btn btn-square bg-pup-red text-white border-none hover:bg-pup-yellow hover:text-pup-red">1</a>
-            <a href="dashboard_page2.html" class="join-item btn btn-square text-pup-red border-pup-red hover:bg-pup-yellow hover:text-pup-red">2</a>
-            <a href="dashboard_page3.html" class="join-item btn btn-square text-pup-red border-pup-red hover:bg-pup-yellow hover:text-pup-red">3</a>
-        </div>
-    </main>
 
-    <footer class="relative bg-[#991b1b] text-white px-12 py-12 overflow-hidden">
+        <!-- CARD 4 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="Student Services System" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="Student Services System Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">Student Services System</h2>
+                <div class="badge bg-orange-200 text-orange-900 border-none font-medium">Student Services</div>
+                <p class="text-sm py-3">Centralized access to student-related services and requests.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="Online Guidance Office Services" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="Online Guidance Office Services Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">Online Guidance Office Services</h2>
+                <div class="badge bg-green-200 text-green-900 border-none font-medium">Health & Wellness</div>
+                <p class="text-sm py-3">Submit counseling requests and communicate with guidance staff online.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="Online Clinic Management System" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="Online Clinic Management System Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">Online Clinic Management System</h2>
+                <div class="badge bg-green-200 text-green-900 border-none font-medium">Health & Wellness</div>
+                <p class="text-sm py-3">Record, monitor, and manage medical visits and student health data.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="Online Repository of Researches & Extension" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="Online Repository of Researches & Extension Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">Online Repository of Researches & Extension</h2>
+                <div class="badge bg-blue-200 text-blue-900 border-none font-medium">Research & Development</div>
+                <p class="text-sm py-3">Access, upload, and manage PUPT research and extension outputs.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 8 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="Accreditation System" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="Accreditation System Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">Accreditation System</h2>
+                <div class="badge bg-blue-200 text-blue-900 border-none font-medium">Research & Development</div>
+                <p class="text-sm py-3">Manages accreditation requirements and quality assurance data.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 9 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="CWTS System" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="CWTS System Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">CWTS System</h2>
+                <div class="badge bg-yellow-200 text-yellow-900 border-none font-medium">Academic</div>
+                <p class="text-sm py-3">Tracks CWTS student activities, performance, and participation logs.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 10 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="Administrative Office System" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="Administrative Office System Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">Administrative Office System</h2>
+                <div class="badge bg-red-200 text-red-900 border-none font-medium">Administrative</div>
+                <p class="text-sm py-3">Digitized processes for internal communication and document tracking.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 11 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="Property Inventory Management System" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="Property Inventory Management System Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">Property Inventory Management System</h2>
+                <div class="badge bg-red-200 text-red-900 border-none font-medium">Administrative</div>
+                <p class="text-sm py-3">Monitors campus assets, supplies, and equipment inventories.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 12 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="Registrar Service System" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="Registrar Service System Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">Registrar Service System</h2>
+                <div class="badge bg-red-200 text-red-900 border-none font-medium">Administrative</div>
+                <p class="text-sm py-3">Online access to student records, certifications, and transcript requests.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 13 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="Admission System" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="Admission System Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">Admission System</h2>
+                <div class="badge bg-orange-200 text-orange-900 border-none font-semibold">Student Services</div>
+                <p class="text-sm py-3">Handles applicant registration, evaluation, and admission status.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 14 -->
+        <div class="card system-card bg-base-100 shadow-md hover:shadow-lg transition duration-300">
+            <figure class="relative">
+                <img src="assets/system_card_blur.png" alt="OJT System" class="h-auto object-contain transition-opacity duration-500 hover:opacity-0" />
+                <img src="assets/system_card_clear.png" alt="OJT System Clear" class="h-auto object-contain absolute inset-0 opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </figure>
+            <div class="card-body gap-0">
+                <h2 class="card-title text-pup-red text-lg pb-1">OJT System</h2>
+                <div class="badge bg-orange-200 text-orange-900 border-none font-semibold">Student Services</div>
+                <p class="text-sm py-3">Tracks internship placements, partner companies, and student performance.</p>
+                <div class="card-actions justify-end items-center">
+                    <button class="btn btn-sm bg-pup-red hover:bg-pup-yellow hover:text-black text-white border-none">Access</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="join flex justify-center mt-10">
+      <button class="join-item btn btn-square text-pup-red border-pup-red hover:bg-pup-yellow hover:text-pup-red" data-page="1">1</button>
+      <button class="join-item btn btn-square text-pup-red border-pup-red hover:bg-pup-yellow hover:text-pup-red" data-page="2">2</button>
+      <button class="join-item btn btn-square text-pup-red border-pup-red hover:bg-pup-yellow hover:text-pup-red" data-page="3">3</button>
+    </div>
+  </main>
+
+  <footer class="relative bg-[#991b1b] text-white px-12 py-12 overflow-hidden">
 
         <!-- MAIN CONTAINER -->
         <div class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-10">
@@ -302,27 +394,131 @@
 
     </footer>
 
-
     <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const toggle = document.getElementById("filter-toggle");
-        const menu = toggle.parentElement.querySelector(".dropdown-content");
 
-        toggle.addEventListener("click", (e) => {
-            e.stopPropagation();
-            menu.classList.toggle("hidden");
+        const cards = Array.from(document.querySelectorAll("#card-container .card"));
+        const searchInput = document.getElementById("search-input");
+        const filterMenu = document.querySelectorAll(".dropdown-content li a");
+        const paginationButtons = document.querySelectorAll(".join-item[data-page]");
+
+        let filteredCards = [...cards]; // For dynamic filtering/search
+        const CARDS_PER_PAGE = 6;
+        let currentPage = 1;
+
+        // ------------------------------
+        // PAGINATION FUNCTION
+        // ------------------------------
+        function showPage(page) {
+            currentPage = page;
+            const start = (page - 1) * CARDS_PER_PAGE;
+            const end = start + CARDS_PER_PAGE;
+
+            // Hide all first
+            cards.forEach(card => card.classList.add("hidden"));
+
+            // Show filtered cards for this page
+            filteredCards.slice(start, end).forEach(card => {
+                card.classList.remove("hidden");
+            });
+
+            updatePaginationButtons();
+        }
+
+        // ------------------------------
+        // UPDATE PAGINATION BUTTON STYLE
+        // ------------------------------
+        function updatePaginationButtons() {
+            paginationButtons.forEach(btn => {
+                const pageNum = parseInt(btn.getAttribute("data-page"));
+
+                if (pageNum === currentPage) {
+                    btn.classList.add("bg-pup-red", "text-white");
+                    btn.classList.remove("bg-white", "text-pup-red");
+                } else {
+                    btn.classList.remove("bg-pup-red", "text-white");
+                    btn.classList.add("bg-white", "text-pup-red");
+                }
+            });
+        }
+
+        // ------------------------------
+        // REBUILD PAGINATION WHEN FILTERING
+        // ------------------------------
+        function rebuildPagination() {
+            const totalPages = Math.ceil(filteredCards.length / CARDS_PER_PAGE);
+
+            paginationButtons.forEach((btn, index) => {
+                if (index < totalPages) {
+                    btn.classList.remove("hidden");
+                    btn.setAttribute("data-page", index + 1);
+                } else {
+                    btn.classList.add("hidden");
+                }
+            });
+
+            currentPage = 1;
+            showPage(1);
+        }
+
+        // ------------------------------
+        // APPLY SEARCH & FILTER TOGETHER
+        // ------------------------------
+        function applyFilters() {
+            const searchText = searchInput.value.toLowerCase();
+
+            filteredCards = cards.filter(card => {
+                const title = card.querySelector(".card-title").textContent.toLowerCase();
+                const badge = card.querySelector(".badge").textContent.toLowerCase();
+
+                // Match search OR category OR both
+                return (
+                    title.includes(searchText) &&
+                    (selectedCategory === "all" || badge.includes(selectedCategory))
+                );
+            });
+
+            rebuildPagination();
+        }
+
+        // ------------------------------
+        // FILTER BY CATEGORY
+        // ------------------------------
+        let selectedCategory = "all";
+
+        filterMenu.forEach(item => {
+            item.addEventListener("click", () => {
+                selectedCategory = item.textContent.trim().toLowerCase();
+                applyFilters();
+            });
         });
 
-        document.addEventListener("click", (e) => {
-            setTimeout(() => {
-            if (!menu.classList.contains("hidden") && !menu.contains(e.target) && !toggle.contains(e.target)) {
-                menu.classList.add("hidden");
-            }
-            }, 50);
+        // ------------------------------
+        // SEARCH EVENT
+        // ------------------------------
+        searchInput.addEventListener("input", () => {
+            applyFilters();
         });
+
+        // ------------------------------
+        // PAGINATION BUTTON CLICKS
+        // ------------------------------
+        paginationButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const page = parseInt(btn.getAttribute("data-page"));
+                showPage(page);
+            });
+        });
+
+        // ------------------------------
+        // INITIAL LOAD → PAGE 1
+        // ------------------------------
+        rebuildPagination();
     });
+
     </script>
-    <script src="assets/js/dashboard-title.js"></script>
-    <script src="assets/js/index.js"></script>
+
+  <script src="assets/js/dashboard-title.js"></script>
+  <script src="assets/js/index.js"></script>
 </body>
 </html>
