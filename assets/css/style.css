@@ -135,9 +135,6 @@ input[type="checkbox"] {
 .pup-logo-img {
   height: 60px;
 }
-.idp-logo-img {
-  height: 90px;
-}
 
 /* Text beside logos */
 .text-column {
@@ -145,7 +142,7 @@ input[type="checkbox"] {
   flex-direction: column;
   color: white;
   align-items: flex-start;
-  margin-left: -10px;
+  margin-left: 5px;
 }
 
 .title {
