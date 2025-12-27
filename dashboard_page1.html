@@ -77,7 +77,7 @@
             <div class="flex flex-col sm:flex-row items-center sm:items-end gap-3">
                 <div class="flex items-center gap-2">
                     <label class="input w-full sm:w-64 flex items-center gap-2 border border-gray-300 px-3 py-2 shadow-sm transition-all duration-300">
-                        <svg class="h-5 w-5 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        <svg class="h-5 w-5 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
                                 <circle cx="11" cy="11" r="8"></circle>
                                 <path d="m21 21-4.3-4.3"></path>
@@ -247,6 +247,62 @@
             <a href="dashboard_page3.html" class="join-item btn btn-square text-pup-red border-pup-red hover:bg-pup-yellow hover:text-pup-red">3</a>
         </div>
     </main>
+
+    <footer class="relative bg-[#991b1b] text-white px-12 py-12 overflow-hidden">
+
+        <!-- MAIN CONTAINER -->
+        <div class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+
+            <!-- LEFT SIDE -->
+            <div class="flex-1 md:max-w-[100%]">
+                <h2 class="text-2xl font-bold m-0">PUPT IDP 2025</h2>
+                <p class="text-yellow-300 font-semibold mt-1 mb-4">Identity Provider System</p>
+
+                <p class="max-w-[600px] text-sm leading-relaxed mb-6">
+                    Polytechnic University of the Philippines Taguig Identity Provider System (PUPT IDP) — 
+                    a centralized authentication platform designed to provide secure, accessible,
+                    and unified digital identity management across all PUPT systems.
+                </p>
+
+                <p class="text-sm text-gray-100">
+                    © 2025 <span class="font-semibold text-white">Polytechnic University of the Philippines</span><br>
+                    All rights reserved. PUPT IDP Management System
+                </p>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="flex-1 md:max-w-[100%] md:text-right">
+                <h3 class="font-semibold mb-4 text-lg">Stay Connected</h3>
+
+                <div class="flex md:justify-end gap-3 mb-2">
+                    <a href="#" class="bg-white/10 hover:bg-white/25 transition p-2 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
+                            class="w-5 h-5 invert" alt="Facebook">
+                    </a>
+
+                    <a href="#" class="bg-white/10 hover:bg-white/25 transition p-2 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg"
+                            class="w-5 h-5 invert" alt="Email">
+                    </a>
+                </div>
+
+                <p class="text-sm">Follow us for updates</p>
+            </div>
+
+        </div>
+
+        <!-- LINKS UNDER -->
+        <div class="relative z-10 text-center mt-10 space-x-3 text-sm">
+            <a href="#" class="hover:text-yellow-300 transition">Privacy Policy</a>
+            <span class="opacity-70">•</span>
+            <a href="#" class="hover:text-yellow-300 transition">Terms of Service</a>
+            <span class="opacity-70">•</span>
+            <a href="#" class="hover:text-yellow-300 transition">Feedback</a>
+        </div>
+
+    </footer>
+
+
     <script>
     document.addEventListener("DOMContentLoaded", () => {
         const toggle = document.getElementById("filter-toggle");
