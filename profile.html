@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUP EIS Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/tailwind.config.js"></script>
+</head>
+
+<body class="min-h-screen bg-gray-200 text-gray-800 font-[Poppins]">
+  <nav class="header-navbar w-full bg-[#991b1b] flex items-center justify-between px-6 py-3 z-[100] relative">
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <img src="assets/PUPlogo.png" alt="PUP Logo" class="pup-logo-img">
+      </div>
+      <div class="text-column">
+        <div class="title"> PUP TAGUIG ONE PORTAL</div>
+        <div class="subtitle">POLYTECHNIC UNIVERSITY OF THE PHILIPPINES — TAGUIG CAMPUS</div>
+      </div>
+    </div>
+    <div class="relative">
+      <button class="profile-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor">
+          <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 
+          1.5c-4 0-7.5 1.79-7.5 4v1.5A1.5 1.5 0 0 0 6 21h12a1.5 
+          1.5 0 0 0 1.5-1.5V17.5c0-2.21-3.5-4-7.5-4Z"/>
+        </svg>
+      </button>
+      <div id="profile-dropdown" class="absolute right-0 mt-2 w-32 bg-white text-black rounded shadow hidden">
+        <form>
+          <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-100">Logout</button>
+          <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-100">Profile</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <footer class="relative bg-[#991b1b] text-white px-12 py-12 overflow-hidden">
+
+        <!-- MAIN CONTAINER -->
+        <div class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+
+            <!-- LEFT SIDE -->
+            <div class="flex-1 md:max-w-[100%]">
+                <h2 class="text-2xl font-bold m-0">PUPT IDP 2025</h2>
+                <p class="text-yellow-300 font-semibold mt-1 mb-4">Identity Provider System</p>
+
+                <p class="max-w-[600px] text-sm leading-relaxed mb-6">
+                    Polytechnic University of the Philippines Taguig Identity Provider System (PUPT IDP) — 
+                    a centralized authentication platform designed to provide secure, accessible,
+                    and unified digital identity management across all PUPT systems.
+                </p>
+
+                <p class="text-sm text-gray-100">
+                    © 2025 <span class="font-semibold text-white">Polytechnic University of the Philippines</span><br>
+                    All rights reserved. PUPT IDP Management System
+                </p>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="flex-1 md:max-w-[100%] md:text-right">
+                <h3 class="font-semibold mb-4 text-lg">Stay Connected</h3>
+
+                <div class="flex md:justify-end gap-3 mb-2">
+                    <a href="#" class="bg-white/10 hover:bg-white/25 transition p-2 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
+                            class="w-5 h-5 invert" alt="Facebook">
+                    </a>
+
+                    <a href="#" class="bg-white/10 hover:bg-white/25 transition p-2 rounded-lg flex items-center justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg"
+                            class="w-5 h-5 invert" alt="Email">
+                    </a>
+                </div>
+
+                <p class="text-sm">Follow us for updates</p>
+            </div>
+
+        </div>
+
+        <!-- LINKS UNDER -->
+        <div class="relative z-10 text-center mt-10 space-x-3 text-sm">
+            <a href="#" class="hover:text-yellow-300 transition">Privacy Policy</a>
+            <span class="opacity-70">•</span>
+            <a href="#" class="hover:text-yellow-300 transition">Terms of Service</a>
+            <span class="opacity-70">•</span>
+            <a href="#" class="hover:text-yellow-300 transition">Feedback</a>
+        </div>
+
+    </footer>
+</body>
+</html>
