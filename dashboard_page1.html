@@ -33,6 +33,7 @@
       <div id="profile-dropdown" class="absolute right-0 mt-2 w-32 bg-white text-black rounded shadow hidden">
         <form>
           <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-100">Logout</button>
+          <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-100">Profile</button>
         </form>
       </div>
     </div>
@@ -542,6 +543,11 @@
         logoutBtn.addEventListener("click", (e) => {
             e.preventDefault(); // prevent form submission
             window.location.href = "index.html";
+
+        const profileBtn = document.querySelectorAll("#profile-dropdown button[type='submit']")[1];
+        profileBtn.addEventListener("click", (e) => {
+            e.preventDefault(); // prevent form submission
+            window.location.href = "profile.html";
         });
 
     });
